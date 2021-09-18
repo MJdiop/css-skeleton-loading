@@ -8,15 +8,18 @@ for (let i = 0; i < 9; i++) {
   grid.append(cardTemplate.content.cloneNode(true));
 }
 
-fetch(API)
-  .then((res) => res.json())
-  .then((posts) => {
-    console.log(posts);
-    grid.innerHTML = '';
-    posts.forEach((post) => {
-      const div = cardTemplate.content.cloneNode(true);
-      div.getElementById('data-title').textContent = post.title;
-      div.getElementById('data-body').textContent = post.body;
-      grid.append(div);
+// I use setTimeout juste for demo
+setTimeout(() => {
+  fetch(API)
+    .then((res) => res.json())
+    .then((posts) => {
+      console.log(posts);
+      grid.innerHTML = '';
+      posts.forEach((post) => {
+        const div = cardTemplate.content.cloneNode(true);
+        div.getElementById('data-title').textContent = post.title;
+        div.getElementById('data-body').textContent = post.body;
+        grid.append(div);
+      });
     });
-  });
+}, 3000);
