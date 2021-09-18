@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Skeleton Loading</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <h1 style="display: flex; justify-content: center">CSS SKELETON LOADING</h1>
+
+    <div class="grid" id="grid"></div>
+
+    <template id="card-template">
+      <div class="card" id="card">
+        <div class="header">
+          <img
+            class="header-img skeleton"
+            src="https://source.unsplash.com/100x100/?nature"
+          />
+          <div class="title" id="data-title" data-title>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+          </div>
+        </div>
+        <div id="data-body" data-body>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
